@@ -17,6 +17,13 @@
 \newtheorem{lemma}{Lema}
 \newtheorem{exercise}{Ejercicio}[section]
 \renewcommand*{\proofname}{Prueba} %Muestra "prueba" en lugar de "proof"
+\def\upint{\mathchoice %Define la integral superior e inferior
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
 
 %letterpaper: 21.59cm x 27.94cm
 \setmargins{1.8 cm} %margen izquierdo
@@ -55,5 +62,6 @@
   \input{lema2.tex}
   \input{Ejercicio6_3.tex}
   \input{Ejercicio7_1.tex}
+  \input{Ejercicio7_11.tex}
 
 \end{document}
