@@ -1,1 +1,28 @@
+\begin{exercise}
+
+Dar un ejemplo de una función acotada $f$ y de una función creciente $\alpha$ definidas en $\left[a,b\right]$ tales que $|f|\in\mathcal{R}\left(\alpha\right)$ pero para las que $\int_a^bf\ d\alpha$ no exista.
+
+\end{exercise}
+
+\renewcommand*{\proofname}{Solución}
+\begin{proof}
+
+Tomemos
+\begin{align*}
+f&:\left[0,1\right]\rightarrow \mathbb{R}\\
+&\quad x\longmapsto f(x)=\begin{cases}
+          1 \quad &\text{si}\ x \in \mathbb{Q} \\
+          -1 \quad &\text{si}\ x \in \mathbb{I} \\
+     \end{cases}
+\end{align*}
+y
+\begin{align*}
+\alpha&:\left[0,1\right]\rightarrow \mathbb{R}\\
+&\quad x\longmapsto \alpha(x)=x.
+\end{align*}
+
+Tenemos que $|f|$ es la función constante en $1$ en $\left[0,1\right]$ y por el Ejercicio \ref{exercise:7.1} se sigue que $|f|\in\mathcal{R}\left(\alpha\right)$ en $\left[0,1\right]$. Sin embargo, $f\notin\mathcal{R}\left(\alpha\right)$ en $\left[0,1\right]$: para cualquier partición $P\in\mathcal{P}\left[a,b\right]$ podemos tomar una elección con cada $t_k$ racional, de modo que $S\left(P,f,\alpha\right)=\sum_{k=1}^{n}f\left(t_k\right)\Delta \alpha_k = \sum_{k=1}^{n}\Delta \alpha_k=\sum_{k=1}^{n}\left(\alpha\left(x_k\right)-\alpha\left(x_{k-1}\right)\right)=\sum_{k=1}^{n}\left(x_k-x_{k-1}\right)=1$; pero también podemos considerar una elección con cada $t_k$ irracional, de modo que $S\left(P,f,\alpha\right)=\sum_{k=1}^{n}f\left(t_k\right)\Delta \alpha_k = \sum_{k=1}^{n}-\Delta \alpha_k=-\sum_{k=1}^{n}\Delta \alpha_k=-1$. De lo anterior, $\int_a^b f\ d\alpha$ no existe.
+
+\end{proof}
+\renewcommand*{\proofname}{Prueba}
 
