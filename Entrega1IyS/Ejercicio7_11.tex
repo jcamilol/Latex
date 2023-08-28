@@ -43,11 +43,32 @@ Como lo anterior se tiene para $P\in\mathcal{P}\left[a,b\right]$ arbitraria, $\u
   \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha \leq \upint_a^b f\ d\alpha.
 \end{equation}
 
-Ahora, sea $\textepsilon>0$ cuaquiera. Entonces $\frac{\textepsilon}{2}>0$ y existen $P_1\in\mathcal{P}\left[a,c\right]$ y $P_2\in\mathcal{P}\left[c,b\right]$ tales que
+Ahora, sea $\text{\textepsilon}>0$ cuaquiera. Entonces $\frac{\text{\textepsilon}}{2}>0$ y existen $P_1\in\mathcal{P}\left[a,c\right]$ y $P_2\in\mathcal{P}\left[c,b\right]$ tales que
 
 \begin{equation*}
-  U\left(P_1,f,\alpha\right)<\upint_a^c f\ d\alpha+\frac{\textepsilon}{2},\quad y,\quad U\left(P_2,f,\alpha\right)<\upint_c^b f\ d\alpha+\frac{\textepsilon}{2},
+  U\left(P_1,f,\alpha\right)<\upint_a^c f\ d\alpha+\frac{\text{\textepsilon}}{2},\quad y,\quad U\left(P_2,f,\alpha\right)<\upint_c^b f\ d\alpha+\frac{\text{\textepsilon}}{2},
 \end{equation*}
+
+luego,
+
+\begin{equation*}
+  U\left(P_1\cup P_2,f,\alpha\right) = U\left(P_1,f,\alpha\right)+U\left(P_2,f,\alpha\right) < \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha + \text{\textepsilon}.
+\end{equation*}
+
+Como $P_1\cup P_2\in\mathcal{P}\left[a,b\right]$, tenemos $\upint_a^b f\ d\alpha \leq U\left(P_1\cup P_2,f,\alpha\right)$, y
+
+\begin{equation*}
+  \upint_a^b f\ d\alpha \leq \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha +\text{\textepsilon}.
+\end{equation*}
+
+Lo anterior vale para $\text{\textepsilon}>0$ arbitrario, por lo que obtenemos
+
+\setcounter{equation}{1}
+\begin{equation}
+  \upint_a^b f\ d\alpha \leq \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha.
+\end{equation}
+
+De (1) y (2) se concluye $\upint_a^b f\ d\alpha = \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha.$
 
 \end{itemize}
 
