@@ -16,72 +16,9 @@ Si $\alpha \nearrow$ en $\left[a,b\right]$, probar que se verifica :
 \begin{proof}
 
 \begin{itemize}
-  \item[\textbf{\textit{a)}}]Sea $P\in\mathcal{P}\left[a,b\right]$ cualquiera. Tomamos $P'=P\cup\left\lbrace c\right\rbrace$. Supongamos $P'=\left\lbrace a=x_0,\dots,x_\gamma=c,\dots,x_n=b\right\rbrace$. Tomemos $P'_1=\left\lbrace a=x_0,\dots,x_\gamma=c\right\rbrace\in\mathcal{P}\left[a,c\right]$ y $P'_2=\left\lbrace c=x_\gamma,\dots,x_n=b\right\rbrace\in\mathcal{P}\left[c,b\right]$. Notemos que
-  \begin{align*}
-  U\left(P'_1,f,\alpha\right)+U\left(P'_2,f,\alpha\right)&=\sum_{k=1}^{\gamma}M_k\left(f\right)\Delta\alpha_k+\sum_{k=\gamma+1}^{n}M_k\left(f\right)\Delta\alpha_k\\
-  &=\sum_{k=1}^{n}M_k\left(f\right)\Delta\alpha_k\\
-  &=U\left(P',f,\alpha\right).
-  \end{align*}
-  Como $P'\supseteq P$ tenemos $U\left(P',f,\alpha\right)\leq U\left(P,f,\alpha\right)$, y por tanto $U\left(P'_1,f,\alpha\right)+U\left(P'_2,f,\alpha\right)\leq U\left(P,f,\alpha\right)$. Ya que $P'_1\in\mathcal{P}\left[a,c\right]$ y $P'_2\in\mathcal{P}\left[c,b\right]$, se sigue
-  \begin{equation*}
-    \upint_a^c f\ d\alpha \leq U\left(P'_1,f,\alpha\right),\quad y,\quad \upint_c^b f\ d\alpha \leq U\left(P'_2,f,\alpha\right).
-  \end{equation*}
-  Por tanto
-  \begin{equation*}
-    \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha \leq U\left(P'_1,f,\alpha\right)+U\left(P'_2,f,\alpha\right)\leq U\left(P,f,\alpha\right).
-  \end{equation*}
-  Como lo anterior se tiene para $P\in\mathcal{P}\left[a,b\right]$ arbitraria, $\upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha$ es cota inferior del conjunto $\left\lbrace U\left(P,f,\alpha\right):P\in\mathcal{P}\right\rbrace$, y por tanto
-  \setcounter{equation}{0}
-  \begin{equation}
-    \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha \leq \upint_a^b f\ d\alpha.
-  \end{equation}
-  Ahora, sea $\text{\textepsilon}>0$ cuaquiera. Entonces $\frac{\text{\textepsilon}}{2}>0$ y existen $P_1\in\mathcal{P}\left[a,c\right]$ y $P_2\in\mathcal{P}\left[c,b\right]$ tales que
-  \begin{equation*}
-    U\left(P_1,f,\alpha\right)<\upint_a^c f\ d\alpha+\frac{\text{\textepsilon}}{2},\quad y,\quad U\left(P_2,f,\alpha\right)<\upint_c^b f\ d\alpha+\frac{\text{\textepsilon}}{2},
-  \end{equation*}
-  luego,
-  \begin{equation*}
-    U\left(P_1\cup P_2,f,\alpha\right) = U\left(P_1,f,\alpha\right)+U\left(P_2,f,\alpha\right) < \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha + \text{\textepsilon}.
-  \end{equation*}
-  Como $P_1\cup P_2\in\mathcal{P}\left[a,b\right]$, tenemos $\upint_a^b f\ d\alpha \leq U\left(P_1\cup P_2,f,\alpha\right)$, y
-  \begin{equation*}
-    \upint_a^b f\ d\alpha \leq \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha +\text{\textepsilon}.
-  \end{equation*}
-  Lo anterior vale para $\text{\textepsilon}>0$ arbitrario, por lo que obtenemos
-  \setcounter{equation}{1}
-  \begin{equation}
-    \upint_a^b f\ d\alpha \leq \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha.
-  \end{equation}
-  De (1) y (2) se concluye $\upint_a^b f\ d\alpha = \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha.$
-  \item[\textbf{\textit{c)}}]Sea $\text{\textepsilon}>0$ cualquiera. Entonces $\frac{\text{\textepsilon}}{2}>0$. Existen $P_1,P_2\in\mathcal{P}\left[a,b\right]$ tales que
-  \begin{equation*}
-    \lowint_a^b f\ d\alpha - \frac{\text{\textepsilon}}{2} < L\left(P_1,f,\alpha\right),\quad y,\quad \lowint_a^b g\ d\alpha - \frac{\text{\textepsilon}}{2} < L\left(P_2,g,\alpha\right).
-  \end{equation*}
-  Entonces $\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha - \text{\textepsilon} < L\left(P_1,f,\alpha\right)+L\left(P_2,g,\alpha\right)$. Como $P_1\cup P_2 \in \mathcal{P}\left[a,b\right]$ y es más fina que $P_1$ y que $P_2$, entonces $L\left(P_1,f,\alpha\right)+L\left(P_2,g,\alpha\right) \leq L\left(P_1\cup P_2,f,\alpha\right)+L\left(P_1\cup P_2,g,\alpha\right)$.\\
-  Ahora bien, notemos que en cada subintervalo $\left[x_{k-1},x_k\right]$ de $P_1\cup P_2$ tenemos
-  \begin{align*}
-    m_k\left(f\right)+m_k\left(g\right)&=inf\left\lbrace f\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace+inf\left\lbrace g\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace\\
-    &\leq inf\left\lbrace f\left(x\right)+g\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace\\
-    &=m_k\left(f+g\right),
-  \end{align*}
-por tanto,
-\begin{align*}
-  L\left(P_1\cup P_2, f, \alpha\right)+L\left(P_1\cup P_2, g, \alpha\right)&=\sum_{k=1}^{n} m_k\left(f\right)\Delta\alpha_k+\sum_{k=1}^{n} m_k\left(g\right)\Delta\alpha_k\\
-  &=\sum_{k=1}^{n} \left(m_k\left(f\right)+m_k\left(g\right)\right)\Delta\alpha_k\\
-  &\leq \sum_{k=1}^{n} m_k\left(f+g\right)\Delta\alpha_k\\
-  &=L\left(P_1\cup P_2, f+g, \alpha\right).
-\end{align*}
-También, $L\left(P_1\cup P_2, f+g, \alpha\right)\leq \lowint_a^b\left(f+g\right)\ d\alpha$. Por consiguiente,
-\begin{equation*}
-\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha - \text{\textepsilon} \leq \lowint_a^b \left(f+g\right)\ d\alpha,
-\end{equation*}
-\begin{equation*}
-\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha \leq \lowint_a^b \left(f+g\right)\ d\alpha +  \text{\textepsilon}.
-\end{equation*}
-Como esto se tiene para $\text{\textepsilon}>0$ arbitrario, concluimos
-\begin{equation*}
-\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha \leq \lowint_a^b \left(f+g\right)\ d\alpha.
-\end{equation*}
+  \item[\textbf{\textit{a)}}]\input{Inciso_a.tex}
+  \item[\textbf{\textit{b)}}]\input{Inciso_b.tex}
+  \item[\textbf{\textit{c)}}]\input{Inciso_c.tex}
 \end{itemize}
 
 \end{proof}
