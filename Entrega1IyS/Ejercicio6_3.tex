@@ -1,0 +1,18 @@
+\setcounter{section}{6}
+\setcounter{exercise}{2}
+\begin{exercise}
+
+  Probar que una función polinómica $f$ es de variación acotada en todo intervalo compacto $\left[a,b\right]$. Describir un método que permita calcular la variación total de $f$ en $\left[a,b\right]$ conociendo los ceros de la derivada $f'$.
+
+\end{exercise}
+
+\begin{proof}
+
+Sea $f$ una función polinómica en $\left[a,b\right]$. Sabemos que $f$ es continua en $\left[a,b\right]$ y que $f'$ (que también es una función polinómica) existe y es acotada en $\left(a,b\right)$. Por tanto $f$ es de variación acotada en $\left[a,b\right]$.\\
+Si $f$ es constante en $\left[a,b\right]$, se tiene $V_f\left(a,b\right)=0$. Supongamos $grado\left(f\right)$>1, de modo que $grado\left(f'\right)\geq 0$ y $f'$ no es el polinomio nulo. Si $f'$ no tiene ceros en $\left[a,b\right]$, se sigue que $f'\left(x\right)>0$ para todo $x$ en $\left[a,b\right]$, o $f'\left(x\right)<0$ para todo $x$ en $\left[a,b\right]$ (si $f'\left(c\right)>0$ y $f'\left(d\right)>0$ para $c,d\in \left[a,b\right]$, por el teorema del valor intermedio $f'$ tendría algún cero en $\left[a,b\right]$. En todo caso, $f$ es monótona en $\left[a,b\right]$ y $V_f\left(a,b\right)=|f\left(b\right)-f\left(a\right)|$. Supongamos que $f'$ tiene ceros en $\left[a,b\right]$. Como $f'$ tiene a lo más $grado\left(f\right)\in \mathcal{Z}^{+}$ ceros en $\mathcal{R}$, podemos enumerarlos y ordenarlos. Así, sean $x_1<x_2<\dots<x_m$ todos los ceros de $f'$ en $\left[a,b\right]$, y llamemos $x_0:=a$ y $x_{m+1}:=b$. Notemos que en cada subintervalo $\left[x_{k-1},x_k\right]$ (con $k\in \left\lbrace 1,\dots, m+1 \right\rbrace$ la función $f$ es monótona y por tanto $V_f\left(x_{k-1},x_k\right)=|f\left(x_k\right)-f\left(x_{k-1}\right)|$. Por la propiedad aditiva de la variación total, se sigue que
+
+\begin{equation*}
+  V_f\left(a,b\right)=\sum_{k=1}^{m+1}V_f\left(x_{k-1},x_k\right)=\sum_{k=1}^{m+1}|f\left(x_k\right)-f\left(x_{k-1}\right)|.
+\end{equation*}
+
+\end{proof}

@@ -1,0 +1,20 @@
+\begin{lemma}
+
+Sea $f$ una función monótona en $ \left[ a,b \right] $. Entonces $V_f \left( a,b \right) = |f\left(b\right)-f\left(a\right)|$.
+
+\end{lemma}
+
+\begin{proof}
+
+Analizamos dos casos:
+\begin{itemize}
+  
+  \item[\tiny{\ding{110}}] Supongamos $f \nearrow en \left[ a,b \right]$. Para cualquier partición $P \in \mathcal{P} \left[ a,b \right]$ se tiene $\sum_{k=1}^{n} |\Delta f_k|= \sum_{k=1}^{n} |f\left(x_k\right)-f\left( x_{k-1}\right)| = \sum_{k=1}^{n} \left(f\left(x_k \right)-f\left(x_{k-1} \right)\right)=f \left(b \right)-f\left(a \right)=|f\left(b \right)-f\left(a \right)|$.\\
+
+  \item[\tiny{\ding{110}}] Supongamos $f \searrow en \left[ a,b \right]$. Para cualquier partición $P \in \mathcal{P} \left[ a,b \right]$ se tiene $\sum_{k=1}^{n} |\Delta f_k|= \sum_{k=1}^{n} |f\left(x_k\right)-f\left( x_{k-1}\right)| = \sum_{k=1}^{n} \left(f\left(x_{k-1} \right)-f\left(x_{k} \right)\right)=f \left(a \right)-f\left(b \right)=|f\left(b \right)-f\left(a \right)|$.\\
+  
+\end{itemize}
+
+En cualquier caso, se tiene $V_f \left(a,b\right)=sup\left\lbrace\sum \left(P\right):P\in \mathcal{P} \left[a,b\right]\right\rbrace=sup\left\lbrace|f\left(b\right)-f\left(a\right)|\right\rbrace=|f\left(b\right)-f\left(a\right)|.$ 
+
+\end{proof}
