@@ -12,3 +12,44 @@ Si $\alpha \nearrow$ en $\left[a,b\right]$, probar que se verifica :
 \end{itemize}
 
 \end{exercise}
+
+\begin{proof}
+
+\begin{itemize}
+  \item[a)]Sea $P\in\mathcal{P}\left[a,b\right]$ cualquiera. Tomamos $P'=P\cup\left\lbrace c\right\rbrace$. Supongamos $P'=\left\lbrace a=x_0,\dots,x_\gamma=c,\dots,x_n=b\right\rbrace$. Tomemos $P'_1=\left\lbrace a=x_0,\dots,x_\gamma=c\right\rbrace\in\mathcal{P}\left[a,c\right]$ y $P'_2=\left\lbrace c=x_\gamma,\dots,x_n=b\right\rbrace\in\mathcal{P}\left[c,b\right]$. Notemos que
+
+  \begin{align*}
+  U\left(P'_1,f,\alpha\right)+U\left(P'_2,f,\alpha\right)&=\sum_{k=1}^{\gamma}M_k\left(f\right)\Delta\alpha_k+\sum_{k=\gamma+1}^{n}M_k\left(f\right)\Delta\alpha_k\\
+  &=\sum_{k=1}^{n}M_k\left(f\right)\Delta\alpha_k\\
+  &=U\left(P',f,\alpha\right).
+  \end{align*}
+
+Como $P'\supseteq P$ tenemos $U\left(P',f,\alpha\right)\leq U\left(P,f,\alpha\right)$, y por tanto $U\left(P'_1,f,\alpha\right)+U\left(P'_2,f,\alpha\right)\leq U\left(P,f,\alpha\right)$. Ya que $P'_1\in\mathcal{P}\left[a,c\right]$ y $P'_2\in\mathcal{P}\left[c,b\right]$, se sigue
+
+\begin{equation*}
+  \upint_a^c f\ d\alpha \leq U\left(P'_1,f,\alpha\right),\quad y,\quad \upint_c^b f\ d\alpha \leq U\left(P'_2,f,\alpha\right).
+\end{equation*}
+
+Por tanto
+
+\begin{equation*}
+  \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha \leq U\left(P'_1,f,\alpha\right)+U\left(P'_2,f,\alpha\right)\leq U\left(P,f,\alpha\right).
+\end{equation*}
+
+Como lo anterior se tiene para $P\in\mathcal{P}\left[a,b\right]$ arbitraria, $\upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha$ es cota inferior del conjunto $\left\lbrace U\left(P,f,\alpha\right):P\in\mathcal{P}\right\rbrace$, y por tanto
+
+\setcounter{equation}{0}
+\begin{equation}
+  \upint_a^c f\ d\alpha + \upint_c^b f\ d\alpha \leq \upint_a^b f\ d\alpha.
+\end{equation}
+
+Ahora, sea $\textepsilon>0$ cuaquiera. Entonces $\frac{\textepsilon}{2}>0$ y existen $P_1\in\mathcal{P}\left[a,c\right]$ y $P_2\in\mathcal{P}\left[c,b\right]$ tales que
+
+\begin{equation*}
+  U\left(P_1,f,\alpha\right)<\upint_a^c f\ d\alpha+\frac{\textepsilon}{2},\quad y,\quad U\left(P_2,f,\alpha\right)<\upint_c^b f\ d\alpha+\frac{\textepsilon}{2},
+\end{equation*}
+
+\end{itemize}
+
+\end{proof}
+
