@@ -1,6 +1,6 @@
 Sea $\text{\textepsilon}>0$ cualquiera. Entonces $\frac{\text{\textepsilon}}{2}>0$. Existen $P_1,P_2\in\mathcal{P}\left[a,b\right]$ tales que
   \begin{equation*}
-    U\left(P_1,f,\alpha\right) < \upint_a^b f\ d\alpha + \frac{\textepsilon}{2},\quad y,\quad U\left(P_2,g,\alpha\right) < \upint_a^b g\ d\alpha + \frac{\textepsilon}{2}.
+    U\left(P_1,f,\alpha\right) < \overline{\int}_a^b f\ d\alpha + \frac{\textepsilon}{2},\quad y,\quad U\left(P_2,g,\alpha\right) < \overline{\int}_a^b g\ d\alpha + \frac{\textepsilon}{2}.
   \end{equation*}
   Entonces $U\left(P_1,f,\alpha\right)+U\left(P_2,g,\alpha\right)<\upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha + \text{\textepsilon}$. Como $P_1\cup P_2 \in \mathcal{P}\left[a,b\right]$ y es más fina que $P_1$ y que $P_2$, entonces $U\left(P_1\cup P_2,f,\alpha\right)+U\left(P_1\cup P_2,g,\alpha\right) \leq U\left(P_1,f,\alpha\right)+U\left(P_2,g,\alpha\right)$.\\
   Ahora bien, notemos que en cada subintervalo $\left[x_{k-1},x_k\right]$ de $P_1\cup P_2$ tenemos
@@ -18,10 +18,10 @@ por tanto,
 \end{align*}
 También, $\upint_a^b\left(f+g\right)\ d\alpha \leq U\left(P_1\cup P_2, f+g, \alpha\right)$. Por consiguiente,
 \begin{equation*}
-\upint_a^b \left(f+g\right)\ d\alpha \leq \upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha +  \text{\textepsilon}.
+\overline{\int}_a^b \left(f+g\right)\ d\alpha \leq \overline{\int}_a^b f\ d\alpha + \overline{\int}_a^b g\ d\alpha +  \text{\textepsilon}.
 \end{equation*}
 Como esto se tiene para $\text{\textepsilon}>0$ arbitrario, concluimos
 \begin{equation*}
-\upint_a^b \left(f+g\right)\ d\alpha \leq \upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha .
+\overline{\int}_a^b \left(f+g\right)\ d\alpha \leq \overline{\int}_a^b f\ d\alpha + \overline{\int}_a^b g\ d\alpha .
 \end{equation*}
 
