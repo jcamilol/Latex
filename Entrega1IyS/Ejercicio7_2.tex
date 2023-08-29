@@ -1,0 +1,27 @@
+\begin{exercise}
+  Si $f\in \mathcal{R}\left(\alpha\right)$ en $\left[a,b\right]$ y si $\int_a^b f\ d\alpha=0$ para cada f monótona en $\left[a,b\right]$, probar que $\alpha$ es constante en $\left[a,b\right]$.
+\end{exercise}
+
+\begin{proof}
+  Sea $c\in\left(a,b\right)$ cualquiera. Definimos $f:\left[a,b\right]\rightarrow\mathds{R}$ vía
+  $f(x)=\begin{cases}
+    0 \quad &\text{si}\ x \leq c \\
+    1 \quad &\text{si}\ x >c \\
+  \end{cases}$
+  \quad para todo $x\in\left[a,b\right]$. Claramente $f$ es monótona en $\left[a,b\right]$, así que por hipótesis $f\in\mathcal{R}\left(\alpha\right)$ en $\left[a,b\right]$ y $\int_a^b f\ d\alpha=0$. Como $f\in\mathcal{R}\left(\alpha\right)$ entonces $\alpha\in\mathcal{R}\left(f\right)$ en $\left[a,b\right]$. Veamos que $\int_a^b \alpha\ df = \alpha\left(c\right)$:
+  \begin{itemize}
+    \item[]Sea $\text{\textepsilon}>0$ cualquiera. Existe $P_{\text{\textepsilon}}\in\mathcal{R}\left(\alpha\right)$ tal que si $P\supseteq P_{\text{\textepsilon}}$, para cualquier elección $t_k\in\left[x_{k-1,x_k}\right]$ se tiene $|S\left(P,\alpha,f\right)-\int_a^b\alpha\ df|<\text{\textepsilon}$. Tomemos $P=P_{\text{\textepsilon}}\cup\left\lbrace c \right\rbrace=\left\lbrace x_0=a,\dots,x_\gamma=c,\dots,x_n=b \right\rbrace\subseteq P_{\text{\textepsilon}}$ conla elección $t_k=x_{k-1}\in\left[x_{k-1},x_k\right]$. Se tiene
+    \begin{align*}
+      S\left(P,\alpha,f\right)&=\sum_{k=1}^{n}\alpha\left(x_{k-1}\right)\Delta f_k\\
+      &=\sum_{k=1}^{n}\alpha\left(x_{k-1}\right)\left(f\left(x_k\right)-f\left(x_{k-1}\right)\right).
+    \end{align*}
+    Para $1\leq k\leq \gamma$ tenemos $f\left(x_k\right)-f\left(x_{k-1}\right)=0-0=0$; para $k=\gamma +1$ tenemos $f\left(x_\gamma+1\right)-f\left(x_{\gamma}\right)=f\left(x_\gamma+1\right)-f\left(c\right)=1-0=0$; para $\gamma+2\leq k\leq n tenemos f\left(x_k\right)-f\left(x_{k-1}\right)=1-1=0$. De este modo $S\left(P,\alpha,f\right)=\alpha\left(x_\gamma\right)=\alpha\left(c\right)$. Así, $\left|\alpha\left(c\right)-\int_a^b \alpha\ df\right|= \left|S\left(P,\alpha,f\right)-\int_a^b \alpha\ df\right|<\text{\textepsilon}.$ Como esto se tiene para $\text{\textepsilon}>0$ arbitrario, se sigue que $\left|\alpha\left(c\right)-\int_a^b\alpha\ df\right|=0$ y $\int_a^b\alpha\ df=\alpha\left(c\right)$.
+  \end{itemize}
+  Ahora, haciendo integración por partes tenemos
+  \begin{equation*}
+    0+\alpha\left(c\right)=\int_a^b f\ d\alpha + \int_a^b\alpha\ df= f\left(b\right)\alpha\left(b\right)-f\left(a\right)\alpha\left(a\right)=\alpha\left(b\right),
+  \end{equation*}
+  y $\alpha\left(c\right)=\alpha\left(b\right)$, para $c\in\left(a,b\right)$ cualquiera. Como además la función constante en $1$ es monótona en $\left[a,b\right]$, tenemos $\alpha\left(b\right)-\alpha\left(a\right)=\int_a^bd\alpha=0$, y $\alpha\left(a\right)=\alpha\left(b\right)$, completando la prueba de que $\alpha$ es constante en $\left[a,b\right]$.
+  
+\end{proof}
+
