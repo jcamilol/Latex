@@ -1,6 +1,6 @@
 \begin{exercise}
 
-Dar un ejemplo de una función acotada $f$ y de una función creciente $\alpha$ definidas en $\left[a,b\right]$ tales que $|f|\in\mathcal{R}\left(\alpha\right)$ pero para las que $\int_a^bf\ d\alpha$ no exista.
+Dar un ejemplo de una función acotada $f$ y de una función creciente $\alpha$ definidas en $\left[a,b\right]$ tales que $|f|\in\mathcal{R}\left(\alpha\right)$ pero para las que $\int_a^b f\ d\alpha$ no exista.
 
 \end{exercise}
 
@@ -21,7 +21,22 @@ y
 &\quad x\longmapsto \alpha(x)=x.
 \end{align*}
 
-Tenemos que $|f|$ es la función constante en $1$ en $\left[0,1\right]$ y por el Ejercicio \ref{exercise:7.1} se sigue que $|f|\in\mathcal{R}\left(\alpha\right)$ en $\left[0,1\right]$. Sin embargo, $f\notin\mathcal{R}\left(\alpha\right)$ en $\left[0,1\right]$: para cualquier partición $P\in\mathcal{P}\left[a,b\right]$ podemos tomar una elección con cada $t_k$ racional, de modo que $S\left(P,f,\alpha\right)=\sum_{k=1}^{n}f\left(t_k\right)\Delta \alpha_k = \sum_{k=1}^{n}\Delta \alpha_k=\sum_{k=1}^{n}\left(\alpha\left(x_k\right)-\alpha\left(x_{k-1}\right)\right)=\sum_{k=1}^{n}\left(x_k-x_{k-1}\right)=1$; pero también podemos considerar una elección con cada $t_k$ irracional, de modo que $S\left(P,f,\alpha\right)=\sum_{k=1}^{n}f\left(t_k\right)\Delta \alpha_k = \sum_{k=1}^{n}-\Delta \alpha_k=-\sum_{k=1}^{n}\Delta \alpha_k=-1$. De lo anterior, $\int_a^b f\ d\alpha$ no existe.
+Tenemos que $|f|$ es la función constante en $1$ en $\left[0,1\right]$ y por el Ejercicio \ref{exercise:7.1} se sigue que $|f|\in\mathcal{R}\left(\alpha\right)$ en $\left[0,1\right]$. Ahora bien, para toda $P\in \mathcal{P}\left[0,1\right]$ se tiene
+\begin{align*}
+  U\left(P,f,\alpha\right)&=\sum_{k=1}^n M_k\left(f\right)\Delta\alpha_k\\
+  &=\sum_{k=1}^n \Delta\alpha_k\\
+  &=\sum_{k=1}^n \left(\alpha\left(x_k\right)-\alpha\left(x_{k-1}\right)\right)\\
+  &=\sum_{k=1}^n \left(x_k-x_{k-1}\right)\\
+  &=1,
+\end{align*}
+y también
+\begin{align*}
+  L\left(P,f,\alpha\right)&=\sum_{k=1}^n m_k\left(f\right)\Delta\alpha_k\\
+  &=\sum_{k=1}^n -\Delta\alpha_k\\
+  &=-\sum_{k=1}^n \Delta\alpha_k\\
+  &=-1,
+\end{align*}
+con lo cual $\upint_0^1 f\ d\alpha=inf\left\lbrace U\left(P,f,\alpha\right):P\in\mathcal{P}\left[0,1\right]\right\rbrace=inf\left\lbrace 1\right\rbrace=1$, y $\lowint_0^1 f\ d\alpha=sup\left\lbrace L\left(P,f,\alpha\right):P\in\mathcal{P}\left[0,1\right]\right\rbrace=sup\left\lbrace -1\right\rbrace=-1$. Por tanto $\lowint_0^1 f\ d\alpha \neq \upint_0^1 f\ d\alpha$ y $f\notin\mathcal{R}\left(\alpha\right)$ en $\left[0,1\right]$. Con lo anterior concluimos que $\int_0^1 f\ d\alpha$ no existe.
 
 \end{proof}
 \renewcommand*{\proofname}{Prueba}
