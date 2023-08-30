@@ -5,7 +5,7 @@ Sea $\text{\textepsilon}>0$ cualquiera. Entonces $\frac{\text{\textepsilon}}{2}>
   Entonces $U\left(P_1,f,\alpha\right)+U\left(P_2,g,\alpha\right)<\upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha + \text{\textepsilon}$. Como $P_1\cup P_2 \in \mathcal{P}\left[a,b\right]$ y es más fina que $P_1$ y que $P_2$, entonces $U\left(P_1\cup P_2,f,\alpha\right)+U\left(P_1\cup P_2,g,\alpha\right) \leq U\left(P_1,f,\alpha\right)+U\left(P_2,g,\alpha\right)$.\\
   Ahora bien, notemos que en cada subintervalo $\left[x_{k-1},x_k\right]$ de $P_1\cup P_2$ tenemos
   \begin{align*}
-    M_k\left(f+g\right)&\leq sup\left\lbrace f\left(x\right)+g\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace\\
+    M_k\left(f+g\right)&= sup\left\lbrace f\left(x\right)+g\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace\\
     &\leq sup\left\lbrace f\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace+sup\left\lbrace g\left(x\right): x\in\left[x_{k-1},x_k\right]\right\rbrace\\
     &=M_k\left(f\right)+M_k\left(g\right),
   \end{align*}
@@ -17,9 +17,11 @@ por tanto,
   &=U\left(P_1\cup P_2, f, \alpha\right)+U\left(P_1\cup P_2, g, \alpha\right).
 \end{align*}
 También, $\upint_a^b\left(f+g\right)\ d\alpha \leq U\left(P_1\cup P_2, f+g, \alpha\right)$. Por consiguiente,
-\begin{equation*}
-\upint_a^b \left(f+g\right)\ d\alpha \leq \upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha +  \text{\textepsilon}.
-\end{equation*}
+\begin{align*}
+\upint_a^b \left(f+g\right)\ d\alpha &\leq U\left(P_1\cup P_2, f+g, \alpha\right)\\
+&\leq U\left(P_1\cup P_2, f, \alpha\right)+U\left(P_1\cup P_2, g, \alpha\right)\\
+&< \upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha +  \text{\textepsilon}.
+\end{align*}
 Como esto se tiene para $\text{\textepsilon}>0$ arbitrario, concluimos
 \begin{equation*}
 \upint_a^b \left(f+g\right)\ d\alpha \leq \upint_a^b f\ d\alpha + \upint_a^b g\ d\alpha .

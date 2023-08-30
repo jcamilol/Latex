@@ -6,11 +6,11 @@ Sea $f$ una función continua en $\left[a,b\right]$, tal que $f'$ existe y es ac
 
 \begin{proof}
 
-Existe $A\geq 0$ tal que $|f\left(c\right)| \leq A$ para todo $c \in \left[a,b\right]$. Sea $P= \left\lbrace x_0, x_1, \dots, x_n \right\rbrace \in \mathcal{P}\left[a,b\right]$ cualquiera. Para cada k=1,\dots, n, por el teorema del valor medio para derivadas, existe $c_k\in \left[x_{k-1},x_k\right]$ tal que 
+Existe $A\geq 0$ tal que $|f'\left(c\right)| \leq A$ para todo $c \in \left(a,b\right)$. Sea $P= \left\lbrace x_0, x_1, \dots, x_n \right\rbrace \in \mathcal{P}\left[a,b\right]$ cualquiera. Para cada k=1,\dots, n, por el teorema del valor medio para derivadas, existe $c_k\in \left(x_{k-1},x_k\right)$ tal que 
 \begin{equation*}
   f'\left(c_k\right)=\frac{f\left(x_k\right)-f\left(x_{k-1}\right)}{x_k-x_{k-1}}=\frac{\Delta f_k}{x_k-x_{k-1}}.
 \end{equation*}
-Luego, $\Delta f_ = f'\left(c_k\right)\left(x_k-x_{k-1}\right)$. De este modo,
+Luego, $\Delta f_k = f'\left(c_k\right)\left(x_k-x_{k-1}\right)$. De este modo,
 \begin{align*}
   \sum_{k=1}^{n}|\Delta f_{k}|&=\sum_{k=1}^{n}\left(|f'\left(c_k\right)||x_k-x_{k-1}|\right)\\
   &\leq \sum_{k=1}^{n}A|x_k-x_{k-1}|\\

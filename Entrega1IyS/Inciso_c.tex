@@ -17,12 +17,12 @@ por tanto,
   &=L\left(P_1\cup P_2, f+g, \alpha\right).
 \end{align*}
 También, $L\left(P_1\cup P_2, f+g, \alpha\right)\leq \lowint_a^b\left(f+g\right)\ d\alpha$. Por consiguiente,
-\begin{equation*}
-\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha - \text{\textepsilon} \leq \lowint_a^b \left(f+g\right)\ d\alpha,
-\end{equation*}
-\begin{equation*}
-\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha \leq \lowint_a^b \left(f+g\right)\ d\alpha +  \text{\textepsilon}.
-\end{equation*}
+\begin{align*}
+\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha - \text{\textepsilon} &< L\left(P_1,f,\alpha\right)+L\left(P_2,g,\alpha\right)\\
+&\leq L\left(P_1\cup P_2, f+g, \alpha\right)\\
+&\leq \lowint_a^b \left(f+g\right)\ d\alpha,
+\end{align*}
+y así $\lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha \leq \lowint_a^b \left(f+g\right)\ d\alpha +  \text{\textepsilon}.$
 Como esto se tiene para $\text{\textepsilon}>0$ arbitrario, concluimos
 \begin{equation*}
 \lowint_a^b f\ d\alpha + \lowint_a^b g\ d\alpha \leq \lowint_a^b \left(f+g\right)\ d\alpha.
