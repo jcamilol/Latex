@@ -30,12 +30,12 @@
     \begin{align*}
       d_n-d_{n+1}&=(S_n-t_n)-(S_{n+1}-t_{n+1})\\
       &=(t_{n+1}-t_n)-(S_{n+1}-S_n)\\
-      &=(\int_1^{n+1}f(x)dx-\int_1^{n}f(x)dx)-(\sum_{k=1}^{n+1}f(k)-\sum_{k=1}^n f(k))\\
+      &=\left(\int_1^{n+1}f(x)dx-\int_1^{n}f(x)dx\right)-\left(\sum_{k=1}^{n+1}f(k)-\sum_{k=1}^n f(k)\right)\\
       &=\int_n^{n+1}f(x)dx-f(n+1)\geq 0,
     \end{align*}
     con lo cual $d_{n+1}\leq d_n$. Como lo anterior vale para cualquier $n\in\mathbb{Z}^+$, hemos probado que $\lbrace{d_n\rbrace}$ es una sucesión decreciente, y por tanto para cualquier $n\in\mathbb{Z}^+$ se tiene
     \begin{equation*}
-      d_n\leq d_1=S_2-t_1=\sum_{k=1}^1f(k)-\int_1^{1}f(x)dx=f(1),
+      d_n\leq d_1=S_1-t_1=\sum_{k=1}^1f(k)-\int_1^{1}f(x)dx=f(1),
     \end{equation*}
     lo cual completa la prueba de \textit{\textbf{i)}}.
     \item[\textbf{ii)}] De \textit{\textbf{i)}} se tiene que $\lbrace{d_n\rbrace}$ es una sucesión decreciente y acotada inferiormente por $0$, y por lo tanto $\lbrace{d_n\rbrace}$ converge, es decir, $\lim_{n\to\infty}d_n$ existe.
