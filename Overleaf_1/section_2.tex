@@ -1,0 +1,32 @@
+\begin{definition}
+  Sean $\lbrace{a_n\rbrace}$ y $\lbrace{b_n\rbrace}$ sucesiones reales con $b_n\geq 0$ para todo $n\in\mathbb{Z}^+$. Escribimos $a_n=O(b_n)$ (léase ``$a_n$ es $O$ grande de $b_n$"), si existe $M\in\mathbb{R}^+$ tal que $|a_n|\leq Mb_n$ para todo $n\in\mathbb{Z}^+$. Escribimos $a_n=o(b_n)$ (léase ``$a_n$ es $o$ pequeña de $b_n$") cuando $n\to\infty$, si $\lim_{n\to\infty}\frac{a_n}{b_n}=0$.
+\end{definition}
+\begin{remark}
+  Una ecuación de la forma $a_n=c_n+O(b_n)$ significa que $a_n-c_n=O(b_n)$. Similarmente, $a_n=c_n+o(b_n)$ significa $a_n-c_n=o(b_n)$. La ventaja de esta notación es que nos permite reemplazar ciertas desigualdades por igualdades. Por ejemplo, la desigualdad \ref{eqn:obs_crit_int} implica
+  \begin{equation}
+  \label{eqn:Ec_con_O}  
+    \sum_{k=1}^{n}f(k)=\int_1^{n}f(x)dx+D+O(f(n)).
+  \end{equation}
+\end{remark}
+\begin{example}
+  Tomemos $f(x)=\frac{1}{x}$ en el Teorema \ref{criterio_integral}. Tenemos entonces $t_n=\int_{1}^{n}\frac{1}{x}dx=\log n$, y el inciso \textit{\textbf{ii)}} nos garantiza la existencia del límite
+  \begin{equation*} 
+    \lim_{n\to\infty}\left(\sum_{k=1}^n\frac{1}{k}-\log n\right),
+  \end{equation*} 
+  un famoso número conocido como \textit{constante de Euler}, o \textit{constante de Euler-Mascheroni} (no confundir con el \textit{número de Euler} ``e"), y se denota usualmente por $C$ (o por $\gamma$). Así, de la Ecuación \ref{eqn:Ec_con_O} obtenemos:
+  \begin{equation*}
+    \sum_{k=1}^{n}\frac{1}{k}=\log n+C+O\left(\frac{1}{n}\right).
+  \end{equation*}
+\end{example}
+\begin{example}
+  Ahora, dado $s\in\mathbb{R}$ cualquiera, con $s\neq 1$, tomemos $f(x)=\frac{1}{x^s}$ en el Teorema \ref{criterio_integral}. En el ejemplo \ref{Ejemplo_pseries} probamos que la serie $\sum_{n=1}^{\infty}\frac{1}{n^s}$ converge únicamente cuando $s>1$. Para $s>1$, dicha serie define una importante función conocida como la \textit{función zeta de Riemann}:
+  \begin{equation*}
+    \zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}\hspace{1cm}(s>1).
+  \end{equation*}
+  Para $s>0, s\neq 1$, podemos aplicar la Ecuación \ref{eqn:Ec_con_O} para obtener
+  \begin{equation*}
+    \sum_{k=1}^{n}\frac{1}{k^s}=\frac{n^{1-s}-1}{1-s}+C(s)+O\left(\frac{1}{n^s}\right),
+  \end{equation*}
+  donde $C(s)=\lim_{n\to\infty}\left(\left(\sum_{k=1}^{n}\frac{1}{k^s}\right)-\frac{n^{1-s}-1}{1-s}\right)$.
+\end{example}
+

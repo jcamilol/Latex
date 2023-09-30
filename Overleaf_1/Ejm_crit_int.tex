@@ -1,4 +1,4 @@
-\begin{example}
+\begin{example}\label{Ejemplo_pseries}
   Sea $s\in\mathbb{R}$ cualquiera, y estudiemos la convergencia de la serie $\sum_{n=1}^\infty \frac{1}{n^s}$. Si $s\leq 0$, se tiene $\lim_{x\to\infty}\frac{1}{n^s}\neq 0$ y por tanto $\sum_{n=1}^\infty \frac{1}{n^s}$ diverge trivialmente. Supongamos $s>0$ con $s\neq 1$, y consideremos $f:[1,\infty)\to\mathbb{R}$ como la función definida mediante $f(x)=\frac{1}{x^s}$ para cualquier $x\in[1,\infty)$. Tenemos que $f$ es positiva decreciente y $\lim_{x\to\infty}f(x)=\lim_{x\to\infty}\frac{1}{x^s}=0$; por ende podemos usar el criterio de la integral. Se tiene
   \begin{equation*}
     \int_1^\infty\frac{1}{x^s}dx=\lim_{\omega\to\infty}\int_1^\omega\frac{1}{x^s}dx=\lim_{\omega\to\infty}\left.\left(\frac{x^{1-s}}{1-s}\right)\right|_1^\omega=\lim_{\omega\to\infty}\left(\frac{1}{1-s}(w^{1-s}-1)\right);

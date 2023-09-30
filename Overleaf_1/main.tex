@@ -14,12 +14,13 @@
 \usepackage{lipsum} %para usar el texto de relleno
 \graphicspath{ {./Images/} } %la dirección de la cual se sacan las imágenes
 
-\newtheorem{theorem}{Teorema}
+\newtheorem{theorem}{Teorema}[section]
 \newtheorem{lemma}[theorem]{Lema}
 \newtheorem{exercise}[theorem]{Ejercicio}
 \renewcommand*{\proofname}{Prueba} %Muestra "prueba" en lugar de "proof"
 \newtheorem{remark}[theorem]{Observación}
 \newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{definition}[theorem]{Definición}
 \def\upint{\mathchoice %Define la integral superior e inferior
     {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
@@ -60,5 +61,6 @@
     \input{criterio_integral.tex}
     \input{obs_crit_int.tex}
     \input{Ejm_crit_int.tex}
-  
+  \section{La notación $O$ grande y $o$ pequeña}
+    \input{section_2.tex}
 \end{document}

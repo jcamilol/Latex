@@ -2,9 +2,10 @@
   \begin{itemize}
     \item[\tiny{\ding{110}}] Que la sucesión $\lbrace{t_n\rbrace}$ converja quiere decir que $\lim_{n\to\infty}t_n=\lim_{n\to\infty}\int_1^{n}f(x)dx$ exista, es decir, que la integral impropia $\int_1^{\infty}f(x)dx$ converge. Así, \textit{\textbf{iii)}} nos dice que $\sum_{k=1}^{\infty}f(n)$ converge, si y sólo si $\int_1^{\infty}f(x)dx$ converge; en la práctica, esta es la forma de usar el criterio de la integral para estudiar la convergencia de series.
     \item[\tiny{\ding{110}}] Si llamamos $D=\lim_{n\to\infty}d_n$, entonces $\textit{\textbf{i)}}$ implica $0\leq D\leq f(1)$, y de $\textit{\textbf{iv)}}$ se tiene
-    \begin{equation*}
-      0\leq\sum_{l=1}^k f(l)-\int_1^{k}f(x)dx-D\leq f(k)
-    \end{equation*}
-    para cualquier $k\in\mathbb{Z}^+$. Esta desigualdad es extremadamente útil para calcular ciertas sumas finitas mediante integrales.
+    \begin{equation}
+    \label{eqn:obs_crit_int}
+      0\leq\sum_{k=1}^n f(k)-\int_1^{n}f(x)dx-D\leq f(n)
+    \end{equation}
+    para cualquier $n\in\mathbb{Z}^+$. Esta desigualdad es extremadamente útil para calcular ciertas sumas finitas mediante integrales.
   \end{itemize}
 \end{remark}
