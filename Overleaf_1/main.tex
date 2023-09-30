@@ -15,9 +15,10 @@
 \graphicspath{ {./Images/} } %la dirección de la cual se sacan las imágenes
 
 \newtheorem{theorem}{Teorema}
-\newtheorem{lemma}{Lema}
-\newtheorem{exercise}{Ejercicio}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{exercise}[theorem]{Ejercicio}
 \renewcommand*{\proofname}{Prueba} %Muestra "prueba" en lugar de "proof"
+\newtheorem{remark}[theorem]{Observación}
 \def\upint{\mathchoice %Define la integral superior e inferior
     {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
     {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
