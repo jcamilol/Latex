@@ -1,0 +1,73 @@
+\begin{theorem}\textbf{(Criterio de la integral)}
+  Sea $f$ una función positiva y decreciente definida en el intervalo $[1,\infty)$ tal que $\lim_{x\to\infty}f(x)=0$. Para cualquier $n\in\mathbb{Z}^+$ definimos
+  \begin{equation*}
+    S_n=\sum_{k=1}^{n}f(k),\hspace{1cm} t_n=\int_{1}^{n}f(x)dx,\hspace{1cm} d_n=s_n-t_n.
+  \end{equation*}
+  Entonces tenemos:
+  \begin{itemize}
+    \item[\textbf{i)}] $0<f(n+1)\leq d_{n+1}\leq d_n \leq f(1)$, para cualquier $n\in\mathbb{Z}^+$.
+    \item[\textbf{ii)}] $\lim_{n\to\infty}d_n$ existe.
+    \item[\textbf{iii)}] $\sum_{n=1}^\infty f(n)$ converge, si y sólo si la sucesión $\lbrace{t_n\rbrace}$ converge.
+    \item[\textbf{iv)}] $0\leq d_k-\lim_{n\to\infty} d_n\leq f(k)$, para cualquier $k\in\mathbb{Z}^+$.
+  \end{itemize}
+\end{theorem}
+\begin{proof}
+  \begin{itemize}
+    \item[\textbf{i)}] Ya que $f$ es positiva en $[1,\infty)$, inmediatamente se tiene $0<f(n+1)$ para todo $n\in\mathbb{Z}^+$. Como $f \searrow$ en $[1,\infty)$, para cada $k\in\mathbb{Z}^+$ tenemos $f(x)\leq f(k)$ para todo $x\in[k,k+1]$, de modo que $\int_k^{k+1}f(x)dx\leq \int_k^{k+1}f(k)dx$. Así, para cada $n\in\mathbb{Z}^+$ obtenemos:
+    \begin{align*}
+      t_{n+1}&=\int_1^{n+1}f(x)dx\\
+      &=\sum_{k=1}^n \int_k^{k+1}f(x)dx\\
+      &\leq\sum_{k=1}^n \int_k^{k+1}f(k)dx\\
+      &=\sum_{k=1}^n f(k)\int_k^{k+1}dx\\
+      &=\sum_{k=1}^n f(k)\\
+      &=S_n.
+    \end{align*}
+    Así, se sigue $-S_n\leq-t_{n+1}$ y $S_{n+1}-S_n\leq S_{n+1}-t_{n+1}=d_{n+1}$, pero $S_{n+1}-S_n=\sum_k^{n+1}f(k)-\sum_{k=1}^nf(k)=f(n+1)$, luego $f(n+1)\leq d_{n+1}$. Por otra parte, para cada $n\in\mathbb{Z}^+$ se tiene $f(x)\geq f(n+1)$ para todo $x\in[n,n+1]$ (nuevamente, porque $f\searrow en [1,\infty)$), por tanto
+    \begin{equation*}
+      \int_n^{n+1}f(x)dx\geq\int_n^{n+1}f(n+1)dx=f(n+1)\int_n^{n+1}dx=f(n+1),
+    \end{equation*}
+    y $\int_n^{n+1}f(x)dx-f(n+1)\geq 0$. Así, se obtiene
+    \begin{align*}
+      d_n-d_{n+1}&=(S_n-t_n)-(S_{n+1}-t_{n+1})\\
+      &=(t_{n+1}-t_n)-(S_{n+1}-S_n)\\
+      &=(\int_1^{n+1}f(x)dx-\int_1^{n}f(x)dx)-(\sum_{k=1}^{n+1}f(k)-\sum_{k=1}^n f(k))\\
+      &=\int_n^{n+1}f(x)dx-f(n+1)\geq 0,
+    \end{align*}
+    con lo cual $d_{n+1}\leq d_n$. Como lo anterior vale para cualquier $n\in\mathbb{Z}^+$, hemos probado que $\lbrace{d_n\rbrace}$ es una sucesión decreciente, y por tanto para cualquier $n\in\mathbb{Z}^+$ se tiene
+    \begin{equation*}
+      d_n\leq d_1=S_2-t_1=\sum_{k=1}^1f(k)-\int_1^{1}f(x)dx=f(1),
+    \end{equation*}
+    lo cual completa la prueba de \textit{\textbf{i)}}.
+    \item[\textbf{ii)}] De \textit{\textbf{i)}} se tiene que $\lbrace{d_n\rbrace}$ es una sucesión decreciente y acotada inferiormente por $0$, y por lo tanto $\lbrace{d_n\rbrace}$ converge, es decir, $\lim_{n\to\infty}d_n$ existe.
+    \item[\textbf{iii)}] Se tiene que la serie $\sum_{n=1}^\infty f(n)$ converge, si y sólo si su sucesión de sumas parciales $\lbrace{S_n\rbrace}$ converge. Como $\lim_{n\to\infty} d_n=\lim_{n\to\infty}(S_n-t_n)$ existe, si $\lim_{n\to\infty}S_n$ existe, también lo hace $\lim_{n\to\infty}(S_n-(S_n-t_n))=\lim_{n\to\infty}t_n$, y recíprocamente, si $\lim_{n\to\infty}t_n$ existe, también lo hace $\lim_{n\to\infty}((S_n-t_n)+t_n)=\lim_{n\to\infty}S_n$. Así, $\lbrace{t_n\rbrace}$ converge, si y sólo si $\lbrace{S_n\rbrace}$ converge, es decir, si y sólo si $\sum_{n=1}^\infty f(n)$ converge.
+    \item[\textbf{iv)}] Sea $n\in\mathbb{Z}^+$ cualquiera. En la prueba de \textit{\textbf{i)}} se dedujo $d_n-d_{n+1}=\int_n^{n+1}f(x)dx-f(n+1)$. Como además tenemos
+    \begin{equation*}
+      \int_n^{n+1}f(x)dx\leq\int_n^{n+1}f(n)dx=f(n)\int_n^{n+1}dx=f(n),
+    \end{equation*}
+    tenemos
+    \begin{equation*}
+      0\leq d_n-d_{n+1}=\int_n^{n+1}f(x)dx-f(n+1)\leq f(n)-f(n+1).
+    \end{equation*}
+    Como esto vale para $n\in\mathbb{Z}^+$ arbitrario, para cualesquiera $k,\omega\in\mathbb{Z}^+$ con $\omega\geq k$, tendremos
+    \begin{equation*}
+      0\leq\sum_{n=k}^{\omega}(d_n-d_n+1)\leq\sum_{n=k}^\omega(f(n)-f(n+1)),
+    \end{equation*}
+    y por lo tanto
+    \begin{equation*}
+      0\leq\sum_{n=k}^\infty(d_n-d_{n+1})\leq\sum_{n=k}^\infty(f(n)-f(n+1)).
+    \end{equation*}
+    Notemos además que las series $\sum_{n=k}^\infty(d_n-d_{n+1})$ y $\sum_{n=k}^\infty(f(n)-f(n+1))$ son telescópicas, de modo que
+    \begin{equation*}
+      \sum_{n=k}^\infty(d_n-d_{n+1})=d_k-\lim_{n\to\infty}d_{n+1}=d_k-\lim_{n\to\infty}d_{n},
+    \end{equation*}
+    y,
+    \begin{equation*}
+      \sum_{n=k}^\infty(f(n)-f(n+1))=f(k)-\lim_{n\to\infty}f(n+1)=f(k),
+    \end{equation*}
+    pues por hipótesis $\lim_{x\to\infty}f(x)=0$. Así, obtenemos
+    \begin{equation*}
+      0\leq d_k-\lim_{n\to\infty}d_n\leq f(k),
+    \end{equation*}
+    para $k\in\mathbb{Z}^+$ cualquiera.
+  \end{itemize}
+\end{proof}
