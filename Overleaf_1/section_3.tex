@@ -1,0 +1,53 @@
+En el curso de Introducción al Análisis real se estudió el concepto de límite superior y límite inferior de una sucesión con valores reales. En la presente sección hacemos un pequeño recuerdo de las definiciones y algunos teoremas que se usarán más adelante.
+
+\begin{definition}
+  Sea $\lbrace{a_n\rbrace}$ una sucesión de números reales. Suponga que existe $U\in\mathbb{R}$ que satisface las siguientes dos condiciones:
+  \begin{itemize}
+    \item[\textbf{i)}] Para todo $\text{\textepsilon}>0$ existe $N\in\mathbb{Z}^+$ tal que para cualquier $n>N$ se tiene
+    \begin{equation*}
+      a_n<U+\text{\textepsilon}.
+    \end{equation*}
+    \item[\textbf{ii)}]Para todo $\text{\textepsilon}>0$ y para todo entero $m>0$ existe un entero $n>m$ tal que
+    \begin{equation*}
+      a_n>U-\text{\textepsilon}.
+    \end{equation*}
+    Entonces $U$ es llamado el límite superior de $\lbrace{a_n\rbrace}$ y escribimos
+    \begin{equation*}
+      U=\limsup_{n\to\infty}a_n.
+    \end{equation*}
+  \end{itemize}
+  El inciso $\textit{\textbf{(i)}}$ implica que la sucesión $\lbrace{a_n\rbrace}$ está aacotada superiormente; si no lo está, definimos $\limsup_{n\to\infty}a_n=\infty$. Si la sucesión está acotada superiormente pero no inferiormente, y si no tiene límite superior finito, definimos $\limsup_{n\to\infty}=-\infty$. El límite inferior de $\lbrace{a_n\rbrace}$ se define como:
+  \begin{equation*}
+    \liminf_{n\to\infty}a_n=-\limsup_{n\to\infty}(-a_n).
+  \end{equation*}
+\end{definition}
+\begin{remark}
+  El inciso $\textit{\textbf{(i)}}$ significa que a partir de cierto punto todos los términos de la sucesión $\lbrace{a_n\rbrace}$ estarán a la izquierda de $U+\text{\textepsilon}$; esto también lo expresamos diciendo que ``casi toda la sucesión" está a la izquierda de $U+\text{\textepsilon}$. El inciso \textit{\textbf{(ii)}} significa que hay infinitos términos de la sucesión a la derecha de $U-\text{\textepsilon}$.
+\end{remark}
+\begin{theorem}
+  Sea $\left\{a_n\right\}$ una sucesión de números reales. Entonces se tiene:
+  \begin{itemize}
+    \item[\textbf{a)}] $\liminf _{n \rightarrow \infty} a_n \leq \lim\sup _{n \rightarrow \infty} a_n$.
+    \item[\textbf{b)}] La sucesión $\lbrace{a_n\rbrace}$ converge si, y sólo si, $\limsup _{n \rightarrow \infty} a_n$ y $\liminf _{n \rightarrow \infty} a_n$ son ambos finitos e iguales; en este caso, $\lim _{n \rightarrow \infty} a_n=\liminf _{n \rightarrow \infty} a_n=\limsup _{n \rightarrow \infty} a_n$.
+    \item[\textbf{c)}] La sucesión $\lbrace{a_n\rbrace}$ diverge hacia $\infty$ si, y sólo si, $\liminf _{n \rightarrow \infty} a_n=\limsup _{n \rightarrow \infty} a_n=$ $\infty$.
+    \item[\textbf{d)}] La sucesión $\lbrace{a_n\rbrace}$ diverge hacia $-\infty$ si, y sólo si, $\lim\inf _{n \rightarrow \infty} a_n=\limsup _{n \rightarrow \infty} a_n=$ $-\infty$.
+  \end{itemize}
+\end{theorem}
+\begin{theorem}
+  Suponga que $a_n \leq b_n$ para todo $n\in\mathbb{Z}^+$. Entonces se tiene:
+  $$
+    \liminf _{n \rightarrow \infty} a_n \leq \liminf _{n \rightarrow \infty} b_n \quad \text { y } \quad \limsup _{n \rightarrow \infty} a_n \leq \limsup _{n \rightarrow \infty} b_n .
+  $$
+\end{theorem}
+\begin{example}
+  \hspace{6cm} \\
+  \begin{tabular}{l  l   l}
+    \textbf{1.} $a_n=(-1)^n(1+1 / n)$,&$\liminf _{n \rightarrow \infty} a_n=-1$,&$\limsup a_n=1$.\\
+    \textbf{2.} $a_n=(-1)^n$,&$\liminf _{n \rightarrow \infty} a_n=-1$,&$\limsup _{n \rightarrow \infty} a_n=1$.\\
+    \textbf{3.} $a_n=(-1)^n n$,&$\liminf _{n \rightarrow \infty} a_n=-\infty$,&$\limsup _{n \rightarrow \infty} a_n=\infty$.\\
+    \textbf{4.} $a_n=n^2 \sin ^2\left(\frac{1}{2} n \pi\right)$,&$\liminf _{n \rightarrow \infty} a_n=0$,&$\limsup a_n=\infty$.
+  \end{tabular}
+\end{example}
+
+
+
