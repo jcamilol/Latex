@@ -1,1 +1,20 @@
+\begin{theorem}[Criterio de la raiz]
+  Sea $\sum a_n$ una serie de números complejos, y tomemos
+  $$
+    \rho=\lim _{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}
+  $$
+  Entonces se tiene:
+  \begin{itemize}
+  \item[\textbf{a)}] Si $\rho<1$, la serie $\sum a_n$ converge absolutanente.
+  \item[\textbf{b)}] Si $\rho>1$, la serie $\sum a_n$ diverge.
+  \item[\textbf{c)}] Si $\rho=1$, el criterio no decide.
+  \end{itemize}
+\end{theorem}
+\begin{proof}
+  \begin{itemize}
+  \item[\textbf{a)}] Supongamos que $\rho<1$. Existe $x \in \mathbb{R}$ tal gue $\rho<x<1$. Tomemos $\text{\textepsilon}=x-\rho>0$. Por la definición de $\rho$, existe $N \in \mathbb{Z}^{+}$ tal que para cualquier $n \geq N$ se tiene $\sqrt[n]{\left|a_n\right|}<p+\text{\textepsilon}=p+(x-p)=x$, y por tanto $\left|a_n\right|<x^n$. Notemos que $\sum x^n$ es una serie geométrica con radio $x \in(0,1)$ (tenemos $x>\rho$ y $\rho \geq0$ pues $\left\{\sqrt[n]{|a_{n}|}\right\}$ es una sucesión de términos no negativos), y por tanto converge. Del criterio de comparación se sigue que $\sum |a_n|$ converge, es decir, $\sum a_n$ converge absolutamente.
+  \item[\textbf{b)}] Supongamos que $\rho>1$. Existe $x \in \mathbb{R}$ tal que $\rho>x>1$. Tomemos $\text{\textepsilon}=\rho-x>0$. Por la definición de $\rho$, para todo $m>0$ existe $n>m$ tal que $\sqrt[n]{\left|a_n\right|}>p-\text{\textepsilon}=p-(p-x)=x>1$, y por tanto se tiene $\left|a_n\right|>1$ infinitas veces, con lo cual $\lim _{n \rightarrow \infty}\left|a_n\right| \neq 0$ y $\lim _{n \rightarrow \infty} a_n \neq 0$. Con lo anterior, $\sum a_n$ diverge.
+  \item[\textbf{c)}] Para probar \textit{\textbf{c)}} podemos tomar los mismos ejemplos usados en el Teorema \ref{crit_cociente}: para la serie divergente $\sum \frac{1}{n}$ tenemos $\lim _{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}=\lim _{n \rightarrow \infty} \sqrt[n]{\frac{1}{n}}=1$ y por tanto $\rho=1$, y para la serie convergente $\sum \frac{1}{n^2}$ también se tiene $\lim _{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}=\lim _{n \rightarrow \infty} \sqrt[n]{\frac{1}{n^2}}=1$ y $\rho=1$.
+  \end{itemize}
+\end{proof}
 
