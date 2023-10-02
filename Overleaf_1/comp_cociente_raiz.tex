@@ -1,0 +1,35 @@
+\begin{example}
+  Consideremos la serie 
+  $$\sum a_n=\frac{1}{2}+\frac{1}{3}+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{2^3}+\frac{1}{3^3}+\frac{1}{2^4}+\frac{1}{3^4}+\dots$$
+  Para $n$ par tenemos 
+  $$\left|\frac{a_{n+1}}{a_n}\right|=\left|\frac{3^{\frac{n}{2}}}{2^{\frac{n+2}{2}}}\right|=\frac{3^{n / 2}}{2^{n / 2}\cdot 2} =\frac{1}{2}\left(\frac{3}{2}\right)^{n / 2} \rightarrow \infty \text{ cuando } n \rightarrow \infty.$$
+  Para $n$ impar tenemos 
+  $$\left|\frac{a_{n+1}}{a_n}\right|=\left|\frac{2^{\frac{n+1}{2}}}{3^{\frac{n+1}{2}}}\right|=\left(\frac{2}{3}\right)^{\frac{n+1}{2}} \rightarrow 0 \text{ cuando } n \rightarrow \infty.$$
+  Entonces $\limsup_ {n \rightarrow \infty}\left|\frac{a_{n+1}}{a_n}\right|=\infty$, mientras que $\liminf_ {n \rightarrow \infty}\left|\frac{a_{n+1}}{a_n}\right|=0$. Nos encontramos así en el caso \textit{\textbf{c)}} del criterio del cociente (Teorema \ref{crit_cociente}), y por tanto este criterio no nos da información sobre la convergencia de $\sum a_n$.\\
+  Ahora usemos el criterio de la raíz. Para $n$ par tenemos
+  $$\sqrt[n]{\left|a_n\right|}=\left(\frac{1}{3^{\frac{n}{2}}}\right)^\frac{1}{n}=\frac{1}{3^\frac{1}{2}}=\frac{\sqrt{3}}{3}.$$
+  Para $n$ impar tenemos
+  $$\sqrt[n]{\left|a_n\right|}=\left(\frac{1}{2^\frac{n+1}{2}}\right)^\frac{1}{n}=\left(\frac{1}{2^\frac{n}{2}\cdot 2^\frac{1}{2}}\right)^\frac{1}{n}=\left(\frac{1}{2^\frac{1}{2}}\right)\left(\frac{1}{2^\frac{1}{2n}}\right)\to \frac{1}{2^\frac{1}{2}}=\frac{\sqrt{2}}{2} \text{ cuando }n\to\infty.$$
+  Por lo tanto $\limsup _{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}=\frac{\sqrt{2}}{2}<1$, y por el criterio de la raiz, la serie $\sum a_n$ converge absolutanente.
+\end{example}
+\begin{example}
+  Consideremos la serie
+  \begin{align*}
+    \sum a_n &= \frac{1}{2}+1+\frac{1}{8}+\frac{1}{4}+\frac{1}{32}+\frac{1}{16}+\frac{1}{128}+\frac{1}{64}+\dots\\[2ex]
+    &= \frac{1}{2}+\frac{1}{2^0}+\frac{1}{2^3}+\frac{1}{2^2}+\frac{1}{2^5}+\frac{1}{2^4}+\frac{1}{2^7}+\frac{1}{2^6}+\dots
+  \end{align*}
+  Para $n$ par tenemos 
+  $$\left|\frac{a_{n+1}}{a_n}\right|=\left|\frac{2^{n-2}}{2^{n+1}}\right|=\frac{1}{4}\cdot \frac{1}{2}\cdot\frac{2^n}{2^n}=\frac{1}{8}.$$
+  Para $n$ impar tenemos 
+  $$\left|\frac{a_{n+1}}{a_n}\right|=\left|\frac{2^n}{2^{n-1}}\right|=2.$$
+  Entonces $\limsup_ {n \rightarrow \infty}\left|\frac{a_{n+1}}{a_n}\right|=2$, mientras que $\liminf_ {n \rightarrow \infty}\left|\frac{a_{n+1}}{a_n}\right|=\frac{1}{8}$. Nos encontramos así en el caso \textit{\textbf{c)}} del criterio del cociente (Teorema \ref{crit_cociente}), y por tanto este criterio no nos da información sobre la convergencia de $\sum a_n$.\\
+  Ahora usemos el criterio de la raíz. Para $n$ par tenemos
+  $$\sqrt[n]{\left|a_n\right|}=\left(\frac{1}{2^{n-2}}\right)^\frac{1}{n}=\left(\frac{4}{2^{n}}\right)^\frac{1}{n}=\frac{1}{2}\cdot 4^\frac{1}{n}\to \frac{1}{2} \text{ cuando }n\to\infty.$$
+  Para $n$ impar tenemos
+  $$\sqrt[n]{\left|a_n\right|}=\left(\frac{1}{2^{n}}\right)^\frac{1}{n}=\frac{1}{2}.$$
+  Por lo tanto $\limsup _{n \rightarrow \infty} \sqrt[n]{\left|a_n\right|}=\frac{1}{2}<1$, y por el criterio de la raiz, la serie $\sum a_n$ converge absolutanente.
+\end{example}
+\begin{remark}
+  Los anteriores dos ejemplos muestran que el criterio de la raíz puede darnos información acerca de la convergencia de una serie en situaciones en las que el criterio del cociente no es concluyente. Esto lo resumimos diciendo que el criterio de la raiz es ``más poderoso" que el criterio del cociente.
+\end{remark}
+
