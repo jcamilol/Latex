@@ -1,0 +1,19 @@
+\begin{theorem}[Criterio de Dirichlet]
+  Sea $\sum a_{n}$ una serie de números complejos, tal que su sucesión de sumas parciales está acotada, y sea $\left\{b_{n}\right\}$ una sucesión decreciente que converge a $0$ (esto implica que sus términos son no negativos). Entonces $\sum a_{n} b_{n}$ converge.
+\end{theorem}
+\begin{proof}
+  Sea $\left\{A_{n}\right\}$ la sucesión de sumas parciales de la serie $\sum a_{n}$. Sea $n \in \mathbb{Z}^{+}$ cualquiera. Existe $M \geq 0$ tal que $\left|A_{n}\right| \leq M$, es decir $-M \leq A_{n} \leq M$ y por tanto $-M b_{n+1} \leq A_{n} b_{n+1} \leq M b_{n+1}$. Como $\lim _{n \rightarrow \infty}(-M) b_{n+1}=\lim _{n \rightarrow \infty} M b_{n+1}=0$, tenemos
+  $$
+    \lim _{n \rightarrow \infty} A_{n} b_{n+1}=0.
+  $$
+  Así, por el lema anterior, para probar que $\sum a_nb_n$ converge, nos basta probar la convergencia de la serie $\sum A_{n}\left(b_{n+1}-b_{n}\right)$. Como $\left\{b_{n}\right\}$ es una sucesión decreciente, tenemos
+  $$
+    \begin{aligned}
+    \left|A_{n}\left(b_{n+1}-b_{n}\right)\right| & =\left|A_{n}\right|\left|b_{n+1}-b_{n}\right| \\
+    & =\left|A_{n}\right|\left(b_{n}-b_{n+1}\right) \\
+    & \leq M\left(b_{n}-b_{n+1}\right).
+    \end{aligned}
+  $$
+  Notemos que $\sum\left(b_{n}-b_{n+1}\right)$ es una serie telescópica convergente, pues $\sum\left(b_{n}-b_{n+1}\right)=b_{1}-\lim _{n \rightarrow \infty} b_{n+1}=b_{1}$, con to cual, por el criterio de comparación se sigue que $\sum\left|A_{n}\left(b_{n+1}-b_{n}\right)\right|$ converge y por ende también lo hace $\sum A_{n}\left(b_{n+1}-b_{n}\right)$, lo cual completa la prueba.
+\end{proof}
+

@@ -1,0 +1,26 @@
+\begin{lemma}[Fórmula de sumación parcial de Abel]\label{sum_parc}
+  Sean $\left\{a_{n}\right\}$ y $\left\{b_{n}\right\}$ sucesiones de números complejos, y para cada $n \in \mathbb{Z}^{+}$ definamos $A_{n}:=\sum_{k=1}^{n} a_{k}=a_{1}+\cdots+a_{n}$. Entonces tenemos la identidad
+  \begin{equation}\label{eqn:sum_parc}\sum_{k=1}^{n} a_{k} b_{k}=A_{n} b_{n+1}-\sum_{k=1}^{n} A_{k}\left(b_{k+1}-b_{k}\right),\end{equation}
+  que implica que $\sum_{k=1}^{\infty} a_{k} b_{k}$ converge si tanto la sucesión $\left\{A_{n} b_{n+1}\right\}$ como la serie $\sum_{k=1}^{\infty} A_{k}\left(b_{k+1}-b_{k}\right)$ convergen.
+\end{lemma}
+\begin{proof}
+  Definimos $A_{0}=0$. Para cualquier $k \in \mathbb{Z}^{+}$ tenemos
+  $$
+    a_{k}=\left(a_{1}+\cdots+a_{k-1}+a_{k}\right)-\left(a_{1}+\cdots+a_{k-1}\right)=A_{k}-A_{k-1} \text {. }
+  $$
+  Por tanto, para cualquier $n \in \mathbb{Z}^{+}$ se tiene
+  $$
+    \begin{aligned}
+    \sum_{k=1}^{n} a_{k} b_{k} & =\sum_{k=1}^{n}\left(A_{k}-A_{k-1}\right) b_{k} \\
+    & =\sum_{k=1}^{n} A_{k} b_{k}-\sum_{k=1}^{n} A_{k-1} b_{k} \\
+    & =\sum_{k=1}^{n} A_{k} b_{k}-\left(A_{0} b_{1}+\sum_{k=2}^{n+1} A_{k-1} b_{k}-A_{n} b_{n+1}\right) \\
+    & =\sum_{k=1}^{n} A_{k} b_{k}-\left(\sum_{k=1}^{n} A_{k} b_{k+1}-A_{n} b_{n+1}\right) \\
+    & =\sum_{k=1}^{n} A_{k} b_{k}-\sum_{k=1}^{n} A_{k} b_{k+1}+A_{n} b_{n+1}\\
+    & =A_{n} b_{n+1}-\sum_{k=1}^{n} A_{k}\left(b_{k+1}-b_{k}\right) \text {. }
+    \end{aligned}
+  $$
+\end{proof}
+\begin{remark}
+  La Ecuación \ref{eqn:sum_parc}, conocida como la fórmula de sumación parcial de Abel, es análoga a la fórmula de integración por partes en una integral de Riemann-Stieltjes.
+\end{remark}
+

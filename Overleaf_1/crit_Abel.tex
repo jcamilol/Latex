@@ -1,0 +1,11 @@
+\begin{theorem}[Criterio de Abel]
+  Sea $\sum a_{n}$ una serie convergente y $\{b_n\}$ una sucesión monótona convergente. Entonces $\sum a_{n} b_{n}$ converge.
+\end{theorem}
+\begin{proof}
+  Sea $\left\{A_{n}\right\}$ la sucesión de sumas parciales de la serie $\sum a_{n}$. Como $\sum a_{n}$ converge, se tiene que $\lim _{n \rightarrow \infty} A_{n}$ existe y que $\left\{A_{n}\right\}$ es una sucesión acotada. Además, $\left\{b_{n}\right\}$ convenge, y por tanto $\lim _{n \rightarrow \infty} A_{n} b_{n+1}$ existe. Así, por el Lema \ref{sum_parc}, para completar la demostración basta probar la convergencia de la serie $\sum A_{n}\left(b_{n+1}-b_{n}\right)$. Sea $n \in \mathbb{Z}^{+}$ cualquiera. Existe $M \geq 0$ tal que $\left|A_{n}\right| \leq M$, luego $\left|A_{n}\left(b_{n+1}-b_{n}\right)\right| \leq M\left|b_{n+1}-b_{n}\right|$. Si $\{ b_{n}\} \nearrow$ entonces 
+  $$\sum\left|b_{n+1}-b_{n}\right|=\sum\left(b_{n+1}-b_{n}\right)=\lim _{n \rightarrow \infty} b_{n+1}-b_{1},$$
+  y por tanto $\sum\left|b_{n+1}-b_{n}\right|$ converge, pues $\left\{b_{n}\right\}$ converge; si $\{b_n\}\searrow$ entonces 
+  $$\sum\left|b_{n+1}-b_{n}\right|=\sum\left(b_{n}-b_{n+1}\right)=b_{1}-\lim _{n \rightarrow \infty} b_{n+1}$$ 
+  y nuevamente tenemos que $\sum|b_{n+1}-b_{n}|$ converge. En todo caso, $\sum | b_{n+1}-b_{n} |$ converge; del criterio de comparación se sigue que $\sum\left|A_{n}\left(b_{n+1}-b_{n}\right)\right|$ converge, y por tanto también lo hace $\sum A_{n}\left(b_{n+1}-b_{n}\right)$, lo cual completa la prueba.
+\end{proof}
+
