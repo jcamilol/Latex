@@ -1,0 +1,118 @@
+Para poder usar el criterio de Dirichlet efectivamente, debemos tener a mano algunas series tales que sus respectivas sucesiones de sumas parciales sean acotadas. Por supuesto, todas las series convergentes tienen esta propiedad. El siguiente teorema nos permite deducir un ejemplo de una serie divergente cuya sucesión de sumas parciales está acotada. Ésta es la serie geométrica $\sum z^n$, donde $z$ es un número complejo de norma 1 y distinto de 1. La fórmula para las sumas parciales de esta serie es de suprema importancia en la teoría de series de Fourier.  
+\begin{theorem}\label{tma_ec_10}
+  Sea $x \in \mathbb{R}$ cualquiera, con $x \neq 2 m \pi$ para todo $m \in \mathbb{Z}$. Para cualquier $n \in \mathbb{Z}^{+}$ se tiene la identidad
+  \begin{equation}\label{eqn:identidad_10}
+    \sum_{k=1}^{n} e^{i k x}=e^{i x} \frac{1-e^{i n x}}{1-e^{i x}}=\frac{\operatorname{sen}\left(\frac{n x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} e^{\frac{i(n+1) x}{2}} \text {. }
+  \end{equation}
+\end{theorem}
+\begin{proof}
+  Sea $n \in \mathbb{Z}^{+}$ cualquiera. Tenemos
+  $$
+    \left(1-e^{i x}\right) \sum_{k=1}^{n} e^{i k x}=\sum_{k=1}^{n}\left(e^{i k x}-e^{i(k+1) x}\right)=e^{i x}-e^{i(n+1) x},\quad\quad\quad\text{(suma telescópica)}
+  $$
+  y por tanto
+  $$
+    \sum_{k=1}^{n} e^{i k x}=\frac{e^{i x}-e^{i(n+1) x}}{1-e^{i x}}=e^{i x} \frac{1-e^{i n x}}{1-e^{i x}},
+  $$
+  lo cual prueba la primera igualdad en (\ref{eqn:identidad_10}).
+  Ahora, como
+  $$
+    e^{\frac{i(n+1) x}{2}}=e^{\frac{i n x}{2}+\frac{i x}{2}}=e^{\frac{i n x}{2}} \cdot e^{\frac{i x}{2}}=e^{\frac{i n x}{2}} \cdot \frac{e^{i x}}{e^{\frac{i x}{2}}},
+  $$
+  tenemos
+  $$
+  \begin{aligned}
+    \frac{e^{\frac{i n x}{2}}-e^{-\frac{i n x}{2}}}{e^{\frac{i x}{2}}-e^{-\frac{i x}{2}}} e^{\frac{i(n+1) x}{2}} & =\frac{e^{\frac{i n x}{2}}-e^{-\frac{i n x}{2}}}{e^{\frac{i x}{2}}-e^{-\frac{i x}{2}}}e^{\frac{i n x}{2}} \cdot \frac{e^{i x}}{e^{\frac{i x}{2}}} \\[2ex]
+    & =\frac{e^{i n x}-e^{0}}{e^{i x}-e^{0}} e^{i x}\\[2ex]
+    &=e^{i x} \frac{1-e^{i n x}}{1-e^{i x}},\\[2ex]
+  \end{aligned}
+  $$
+  y obtenemos la identidad
+  $$
+  e^{i x} \frac{1-e^{i n x}}{1-e^{i x}}=\frac{e^{\frac{i n x}{2}}-e^{-\frac{i n x}{2}}}{e^{\frac{i x}{2}}-e^{-\frac{i x}{2}}} e^{\frac{i(n+1) x}{2}},
+  $$
+  pero aplicando la fórmula de De Moivre tenemos
+  $$
+  \begin{gathered}
+  e^{\frac{i n x}{2}}=\cos \left(\frac{n x}{2}\right)+i \operatorname{sen}\left(\frac{n x}{2}\right), \\
+  e^{-\frac{i n x}{2}}=\cos \left(-\frac{n x}{2}\right)+i \operatorname{sen}\left(-\frac{n x}{2}\right)=\cos \left(\frac{n x}{2}\right)-i \operatorname{sen}\left(\frac{n x}{2}\right), \\
+  e^{\frac{i x}{2}}=\cos \left(\frac{x}{2}\right)+i \operatorname{sen}\left(\frac{x}{2}\right), \\
+  e^{-\frac{i x}{2}}=\cos \left(-\frac{x}{2}\right)+i \operatorname{sen}\left(-\frac{x}{2}\right)=\cos \left(\frac{x}{2}\right)-i \operatorname{sen}\left(\frac{x}{2}\right) .
+  \end{gathered}
+  $$
+  Por tanto
+  $$
+  \begin{aligned}
+   \frac{e^{\frac{i n x}{2}}-e^{-\frac{i n x}{2}}}{e^{\frac{i x}{2}}-e^{-\frac{i x}{2}}} e^{\frac{i(n+1) x}{2}} & =\frac{2 i \operatorname{sen}\left(\frac{n x}{2}\right)}{2 i \operatorname{sen}\left(\frac{x}{2}\right)} e^{\frac{i(n+1) x}{2}} \\[2ex]
+  & =\frac{\operatorname{sen}\left(\frac{n x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} e^{\frac{i(n+1) x}{2}},\\[2ex]
+  \end{aligned}
+  $$
+  y obtenemos
+  $$
+  e^{i x} \frac{1-e^{i n x}}{1-e^{i x}}=\frac{\operatorname{sen}\left(\frac{n x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} e^{\frac{i(n+1) x}{2}},
+  $$
+  lo que prueba la segunda igualdad en (\ref{eqn:identidad_10}).
+\end{proof}
+\begin{remark}
+  Para cualquier $x \in \mathbb{R}$, con $x \neq 2 m \pi$ para todo $m \in \mathbb{Z}$, la identidad (\ref{eqn:identidad_10}) nos da la siguiente estimación:
+  $$
+    \left|\sum_{k=1}^{n}\left(e^{i x}\right)^{k}\right|=\left|\sum_{k=1}^{n} e^{i k x}\right|=\left|\frac{\operatorname{sen}\left(\frac{n x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} e^{\frac{i(n+1) x}{2}}\right| \leq \frac{1}{\left|\operatorname{sen}\left(\frac{x}{2}\right)\right|},
+  $$
+  que nos permite ver que la sucesion de sumas parciales de la serie $\sum z^{n}$, con $z \in \mathbb{C}-\{1\}$ y $|z|=1$, está acotada.
+\end{remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{remark}
+  Con las condiciones del Teorema \ref{tma_ec_10} tenemos
+  $$
+  \sum_{k=1}^{n} e^{i k x}=\sum_{k=1}^{n}(\cos (k x)+i \operatorname{sen}(k x))=\sum_{k=1}^{n} \cos (k x)+i \sum_{k=1}^{n} \operatorname{sen}(k x) \text {. }
+  $$
+  y también
+  $$
+  \begin{aligned}
+  \frac{\operatorname{sen}\left(\frac{n x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} e^{\frac{i(n+1) x}{2}}&=\frac{\operatorname{sen}\left(\frac{n x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}\left(\cos \left(\frac{(n+1) x}{2}\right)+i \operatorname{sen}\left(\frac{(n+1) x}{2}\right)\right) \\[2ex]
+  & =\frac{\operatorname{sen}\left(\frac{n x}{2}\right) \cos \left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}+i \frac{\operatorname{sen}\left(\frac{n x}{2}\right) \operatorname{sen}\left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}\\[2ex]
+  & =\frac{\operatorname{sen}\left(\frac{n x}{2}\right) \cos \left(\frac{n x}{2}+\frac{x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}+i \frac{\operatorname{sen}\left(\frac{n x}{2}\right) \operatorname{sen}\left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}\\[2ex]
+  & =\frac{\frac{1}{2}\left(\operatorname{sen}\left(n x+\frac{x}{2}\right)+\operatorname{sen}\left(-\frac{x}{2}\right)\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}+i \frac{\operatorname{sen}\left(\frac{n x}{2}\right) \operatorname{sen}\left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}\\[2ex] 
+  &(\text{usamos la identidad } \operatorname{sen} A \cos B=\frac{1}{2}\left[\operatorname{sen} (A+B)+\operatorname{sen} (A-B)\right])\\[2ex]
+  & =\frac{-\frac{1}{2} \operatorname{sen}\left(\frac{x}{2}\right)+\frac{1}{2} \operatorname{sen}\left((2 n+1) \frac{x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)}+i \frac{\operatorname{sen}\left(\frac{n x}{2}\right) \operatorname{sen}\left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} \\[2ex]
+  & =-\frac{1}{2}+\frac{\frac{1}{2} \operatorname{sen}((2 n+1) \frac{x}{2})}{\operatorname{sen}\left(\frac{x}{2}\right)}+i \frac{\operatorname{sen}\left(\frac{n x}{2}\right) \operatorname{sen}\left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} .\\[2ex]
+  \end{aligned}
+  $$
+  Así, considerando las partes real e imaginaria de (\ref{eqn:identidad_10}) obtenemos las siguientes identidades:
+  $$
+  \begin{aligned}
+  & \sum_{k=1}^{n} \cos (k x)=-\frac{1}{2}+\frac{\frac{1}{2} \operatorname{sen}(2 n+1) \frac{x}{2}}{\operatorname{sen}\left(\frac{x}{2}\right)}, \\[2ex]
+  & \sum_{k=1}^{n} \operatorname{sen}(k x)=\frac{\operatorname{sen}\left(\frac{n x}{2}\right) \operatorname{sen}\left(\frac{(n+1) x}{2}\right)}{\operatorname{sen}\left(\frac{x}{2}\right)} .
+  \end{aligned}
+  $$
+\end{remark} 
+\begin{remark} 
+  Usando (10), para cualquier $x \in \mathbb{R}$ con $x \neq m \pi$ para todo $m \in \mathbb{Z}$, y para cualquier $n \in \mathbb{Z}^{+}$, también podemos escribir
+  \begin{equation}\label{eqn:identidad_14}
+  \sum_{k=1}^{n} e^{i(2 k-1) x}=e^{-i x} \sum_{k=1}^{n} e^{i k(2 x)}=\frac{\operatorname{sen} (n x)}{\operatorname{sen} x} e^{i n x}.
+  \end{equation}
+  Como
+  \begin{align*}
+  \sum_{k=1}^{n} e^{i(2 k-1) x}&=\sum_{k=1}^{n} \cos ((2 k-1) x)+i \operatorname{sen}((2 k-1) x)\\[2ex]
+  &=\sum_{k=1}^{n} \cos ((2 k-1) x)+i \sum_{k=1}^{n} \operatorname{sen}((2 k-1) x) \text {, }
+  \end{align*}
+  y también
+  $$
+  \begin{aligned}
+  \frac{\operatorname{sen}(n x)}{\operatorname{sen} x} e^{i n x} & =\frac{\operatorname{sen}(n x)}{\operatorname{sen} x}(\cos (n x)+i \operatorname{sen}(n x)) \\[2ex]
+  & =\frac{\operatorname{sen}(n x) \cos (n x)}{\operatorname{sen} x}+i \frac{\operatorname{sen}^{2}(n x)}{\operatorname{sen} x} \\[2ex]
+  & =\frac{\operatorname{sen}(2 n x)}{2 \operatorname{sen} x}+i \frac{\operatorname{sen}^{2}(n x)}{\operatorname{sen} x},\\[2ex]
+  \end{aligned}
+  $$
+  considerando las partes real e imaginaria de (\ref{eqn:identidad_14}), obtenemos las fórmulas
+  $$
+  \begin{aligned}
+  & \sum_{k=1}^{n} \cos (2 k-1) x=\frac{\operatorname{sen} (2 n x)}{2 \operatorname{sen} x}, \\
+  & \sum_{k=1}^{n} \operatorname{sen} (2 k-1) x=\frac{\operatorname{sen} ^{2} (n x)}{\operatorname{sen} x},
+  \end{aligned}
+  $$
+  las cuales aparecen en la teoría de series de Fourier.
+\end{remark}
+
+
+
