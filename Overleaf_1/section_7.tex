@@ -1,0 +1,41 @@
+\begin{definition}
+  Sea $f: \mathbb{Z}^{+} \rightarrow \mathbb{Z}^{+}$ una función biyectiva, y sean $\sum a_{n}$ y $\sum b_{n}$ series tales que 
+  \begin{equation}\label{eqn:ecuacion_17}
+  b_{n}=a_{f(n)}
+  \end{equation}
+  para todo $n \in \mathbb{Z}^{+}$. Entonces decimos que $\sum b_{n}$ es un reordenamiento de $\sum a_n$.
+\end{definition}
+\begin{remark}
+  La ecuación (\ref{eqn:ecuacion_17}) implica $a_{n}=b_{f^{-1}(n)}$ para todo $n \in \mathbb{Z}^{+}$, y por lo tanto $\sum a_{n}$ también es un reordenamiento de $\sum b_{n}$.
+\end{remark}
+\begin{theorem}
+  Sea $\sum a_{n}$ una serie totalmente convergente con suma $s$. Entonces cualquier reordenamiento de $\sum a_{n}$ también converge absolutamente y tiene suma $s$.
+\end{theorem}
+\begin{proof}
+  Sea $\{b_n\}$ una sucesión definida mediante (\ref{eqn:ecuacion_17}). Tenemos que $\sum_{k=1}^{\infty}\left|a_{k}\right| \in \mathbb{R}, y$ para cualquier $n \in \mathbb{Z}^{+}$
+  $$
+  \left|b_{1}\right|+\cdots+\left|b_{n}\right|=\left|a_{f(1)}\right|+\cdots+\left|a_{f(n)}\right| \leq \sum_{k=1}^{\infty}\left|a_{k}\right| \text {, }
+  $$
+  de modo que la sucesión de sumas parciales de $\sum\left|b_{n}\right|$ está acotada; como además $\sum\left|b_{n}\right|$ es una serie de términos no negativos, se sigue que $\sum\left|b_{n}\right|$ converge, es decir $\sum b_{n}$ converge absolutamente.
+
+  Ahora probemos que $\sum b_{n}=s$. Sean $\left\{s_{n}\right\}$ y $\{tn\}$ las sucesiones de sumas parciales de $\sum a_{n}$ y $\sum b_{n}$ respectivamente. Sea $\text{\textepsilon}>0$ cualquiera. Como $\lim _{n \rightarrow \infty} s_{n}=s$, existe $N_{1} \in \mathbb{Z}^{+}$ tal que $\left|s_{N_{1}}-s\right|<\frac{\text{\textepsilon}}{2}$ para cualquier $n > N_{1}$. Además, como $\sum\left|a_{n}\right|$ converge, podemos escoger $N_{2} \in \mathbb{Z}^{+}$ lo suficientemente grande, tal que $\sum_{k=1}^{\infty}\left|a_{N_{2}+k}\right| \leq \frac{\text{\textepsilon}}{2}$. Entonces, tomando $N=\operatorname{max}\left\{N_{1}, N_{2}\right\}$ y $n>N$ cualquiera, tenemos
+  $$
+  \left|t_{n}-s\right| \leq\left|t_{n}-s_{N}\right|+\left|s_{N}-s\right|<\left|t_{n}-s_{N}\right|+\frac{\text{\textepsilon}}{2} .
+  $$
+  Como $f$ es una biyección, podemos tomar $M$ como el menor entero positivo que satisface 
+  $$\{1, 2, \ldots, N\} \subseteq\{f(1), f(2), \ldots, f(M)\}.$$
+  Sea $n>M$ cualquiera. Si $f(n) \leq N$, entonces $f(n) \in\{f(1), \ldots, f(m)\}$, y por la biyección de $f$ se tendría $n \in\{1, 2, \ldots, M\}$, contradeciendo $n>M$. Por lo tanto $f(n)>N$ y $f(n)=N+\gamma$ pana algún $\gamma \in \mathbb{Z}^{+}$. De este modo tenemos
+  $$
+  \begin{aligned}
+  \left|t_{n}-s_{N}\right| & =\left|b_{1}+\cdots+b_{n}-\left(a_{1}+\cdots+a_{N}\right)\right| \\
+  & =\left|b_{1}+\cdots+b_{M}+\cdots+b_{n}-\left(a_{1}+\cdots+a_{N}\right)\right| \\
+  & =\left|a_{f(1)}+\cdots+a_{f(M)}+\cdots+a_{f(n)}-\left(a_{1}+\cdots+a_{N}\right)\right| \\
+  & =\left|a_{N+\gamma_{1}}+\cdots+a_{N+\gamma_{\omega}}+a_{N+\gamma}\right|\quad\quad\left(\operatorname{con} \gamma_{1}, \cdots, \gamma_{\omega} \in \mathbb{Z}^{+}\right) \\
+  & \leq\left|a_{N+\gamma_{1}}\right|+\cdots+\left|a_{N+\gamma_{\omega}}\right|+\left|a_{N+\gamma}\right| \\
+  & \leq \sum_{k=1}^{\infty}\left|a_{N+k}\right| \\
+  & \leq \frac{\text{\textepsilon}}{2},
+  \end{aligned}
+  $$
+  y por tanto $\left|t_{n}-s\right|<\left|t_{n}-s_{N}\right|+\frac{\text{\textepsilon}}{2} \leq \frac{\text{\textepsilon}}{2}+\frac{\text{\textepsilon}}{2}=\text{\textepsilon}$. Así, hemos probado que para todo $\text{\textepsilon}>0$ existe $N \in \mathbb{Z}^{+}$ tal que para cualquier $n>N$ se tiene $\left|t_{n}-s\right|<\text{\textepsilon}$, es decir, $\{tn\}$ converge a $s$, que es lo mismo que $\sum b_{n}=s$, como queríamos probar.
+\end{proof}
+
